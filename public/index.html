@@ -17,16 +17,16 @@
   <body>
     <h1 class="title">Chat App</h1>
     <div class="main">
-      <div class="name">
-        <span><i class="far fa-user"></i></span>
-        <input
-          type="text"
-          id="name-input"
-          class="name-input"
-          value="anonymous"
-          maxlength="20"
-        />
-      </div>
+      <form class="name" id="name-enter">
+        <span id="user-icon" class="fas fa-user"></span>
+        <span type="text" id="name-input" class="name-input" readonly="true"
+          >Anonymous</span
+        >
+        <div class="box-divider"></div>
+        <button type="submit" class="edit-button">
+          <span id="edit-icon" class="fas fa-edit"></span>
+        </button>
+      </form>
       <ul class="message-box" id="message-box"></ul>
       <form class="message-enter" id="message-enter">
         <input
@@ -34,6 +34,7 @@
           name="message"
           id="message-input"
           class="message-input"
+          placeholder="send-message"
         />
         <div class="box-divider"></div>
         <button type="submit" class="send-button">
